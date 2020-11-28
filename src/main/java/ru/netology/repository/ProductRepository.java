@@ -19,25 +19,17 @@ public class ProductRepository {
         return items;
     }
 
-    public Product findById(int id) {
+    public Product findById(int id) throws NotFoundException {
         for (Product item : items) {
             if (item.getId() == id) {
                 return item;
             }
         }
-        return null;
+        throw new NotFoundException("Element with id: " + id + " not found");
     }
 
     public void removeById(int id) {
-        try {
-            findById(id);
-        } catch (NotFoundException exception) {
-            System.out.println("not found");
-        } catch (RuntimeException exception) {
-            System.out.println("not found");
-        } catch (Exception exception) {
-            System.out.println("not found");
-        }
+        findById(id);
         int length = items.length - 1;
         Product[] tmp = new Product[length];
         int index = 0;

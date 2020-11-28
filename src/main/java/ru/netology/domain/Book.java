@@ -1,7 +1,4 @@
 package ru.netology.domain;
-
-import ru.netology.manager.ProductManager;
-
 import java.util.Objects;
 
 public class Book extends Product {
