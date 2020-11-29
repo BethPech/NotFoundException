@@ -5,6 +5,7 @@
 .settings
 .springBeans
 .sts4-cache
+target
 
 ### IntelliJ IDEA ###
 .idea
@@ -12,6 +13,7 @@
 *.iml
 *.ipr
 out/
+target
 
 ### NetBeans ###
 /nbproject/private/
